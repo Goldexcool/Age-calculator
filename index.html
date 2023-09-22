@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Section -->
+    <section id="section">
+        <div class="section_main_wrapper">
+            <div class="sectionwrapper">
+                <div class="date__wrap">
+                    <div class="day">
+                        <label>DAY</label>
+                        <input placeholder="DD" required id="day">
+                        <small id="error_day"></small>
+                    </div>
+                    <div class="day">
+                        <label>MONTH</label>
+                        <input placeholder="MM" required id="month">
+                        <small id="error_month"></small>
+                    </div>
+                    <div class="day">
+                        <label>YEAR</label>
+                        <input placeholder="YYYY" required id="year">
+                        <small id="error_year"></small>
+                    </div>
+                </div>
+
+                <div class="horizontal_line" id="calculate">
+                    <div class="hr_line"></div>
+                    <div class="circle" ></div>
+                    <img src="./icon-arrow.svg" alt="">
+                </div>
+
+                <div class="date_wrapper">
+                    <div class="--years">
+                        <div class="first_line" id="outputyear">--</div>
+                        <h1>years</h1>
+                    </div>
+                    <div class="--years">
+                        <div class="first_line" id="outputmonth">--</div>
+                        <h1>months</h1>
+                    </div>
+                    <div class="--years">
+                            <div class="first_line" id="outputday">--</div>
+                        <h1>days</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section>
+        <div>
+           
+        </div>
+    </section> -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

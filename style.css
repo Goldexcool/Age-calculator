@@ -1,0 +1,190 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+:root{
+    /* COLORS */
+--Purple: hsl(259, 100%, 65%);
+--Lightred: hsl(0, 100%, 67%);
+
+/* Neutral */
+
+--White: hsl(0, 0%, 100%);
+--Off-white: hsl(0, 0%, 94%);
+--Light-grey: hsl(0, 0%, 86%);
+--Smokey-grey: hsl(0, 1%, 44%);
+--Off-black: hsl(0, 0%, 8%);
+
+/* Body Copy */
+
+--Fontsizeinputs: 32px;
+}
+
+/* Universal Selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: var(--Off-white);
+}
+small{
+    color: var(--Lightred);
+    font-size: 12px;
+}
+#section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* background-color: bisque; */
+}
+.section_main_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    border-radius: 20px 20px 100px 20px;
+    padding: 30px;
+}
+.sectionwrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.date__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: .8rem;
+    margin-left: -2rem;
+}
+.day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .1rem;
+    /* margin-left: -5rem; */
+}
+.day label{
+   display: block;
+   margin-bottom: .5rem;
+   font-size: 12px;
+   color: var(--Smokey-grey);
+}
+.day input{
+    width: 80px;
+    border: 1px solid var(--Smokey-grey);
+    border-radius: 0.25rem;
+    padding: 10px 7px;
+    background-color: transparent;
+    color: var(--Off-black);
+
+}
+.day input::placeholder{
+    color: var(--Off-black);
+    font-size: 15px;
+}
+.horizontal_line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+.horizontal_line .hr_line{
+    margin-left: 1rem;
+    width: 320px;
+    height: 1px;
+    background-color: black;
+}
+.horizontal_line .circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--Purple);
+    position: relative;
+    
+}
+.horizontal_line img{
+    width: 20px;
+    height: 60px;
+    position: absolute;
+    margin-left: 344px;
+}
+.date_wrapper{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-self: center;
+    margin-left: -5rem;
+
+}
+.date_wrapper h1{
+    font-size: 50px;
+    color: var(--Off-black);
+    font-weight: 800;
+    font-family: "Popins", sans-serif;
+
+}
+.--years{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+   
+}
+.first_line{
+    font-size: 50px;
+    color: var(--Purple);
+}
+@media (max-width: 480px) {
+    #section{
+        padding: 80px;
+    }
+    .section_main_wrapper {
+        padding: 20px;
+    }
+    .day input{
+        width: 60px;
+    }
+    .date__wrap{
+        gap: .75rem;
+
+    }
+
+    .horizontal_line img {
+        margin-left: 252px;
+        position: absolute;
+        top: 200px;
+        margin-left: 0px;
+    }
+    .horizontal_line .circle{
+        position: absolute;
+        margin-bottom: 1rem ;
+
+    }
+    .horizontal_line .hr_line{
+        position: relative;
+        width: 280px;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+
+    }
+    .date_wrapper h1{
+        font-size: 30px;
+
+    }
+    .first_line{
+        font-size: 30px;
+    }
+}
+@media (max-width: 320px) {
+    .horizontal_line .hr_line{
+        width: 250px;
+    }
+}
