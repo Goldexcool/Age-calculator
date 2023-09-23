@@ -36,6 +36,8 @@ inputday.addEventListener('input', e =>{
   }else{
     errorday.textContent = '';
     isValid = true;
+    errday.classList.remove("err");
+    errInp.classList.remove("errr");
   }
 })
 
@@ -49,6 +51,8 @@ inputmonth.addEventListener('input', e =>{
   }else{
     errormonth.textContent = '';
     isValid = true;
+    errmon.classList.remove("err");
+    errInpMon.classList.remove("errr");
   }
 })
 
@@ -62,6 +66,8 @@ inputyear.addEventListener('input', e =>{
   }else{
     erroryear.textContent = '';
     isValid = true;
+    erryear.classList.remove("err");
+    errInpYear.classList.remove("errr");
   }
 })
 
