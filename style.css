@@ -30,7 +30,7 @@ body{
 }
 small{
     color: var(--Lightred);
-    font-size: 12px;
+    font-size: 11px;
 }
 #section{
     width: 100%;
@@ -57,11 +57,13 @@ small{
 }
 .date__wrap{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     gap: 1.5rem;
     margin-bottom: .8rem;
     margin-left: -2rem;
+    width: 80%;
+    overflow: hidden;
 }
 .day{
     display: flex;
@@ -69,15 +71,19 @@ small{
     align-items: center;
     justify-content: center;
     gap: .1rem;
+    width: 100%;
+
     /* margin-left: -5rem; */
 }
-.day label{
+
+
+.label{
    display: block;
    margin-bottom: .5rem;
    font-size: 12px;
    color: var(--Smokey-grey);
 }
-.day input{
+.input{
     width: 80px;
     border: 1px solid var(--Smokey-grey);
     border-radius: 0.25rem;
@@ -86,36 +92,38 @@ small{
     color: var(--Off-black);
 
 }
-.day input::placeholder{
+.label.err{
+    color: var(--Lightred);
+}
+
+.input.errr{
+    outline: none;
+    border: 1.5px solid var(--Lightred);
+}
+.label2.err{
+    color: var(--Lightred);
+}
+.label3.err{
+    color: var(--Lightred);
+}
+.input2.errr{
+    outline: none;
+    border: 1.5px solid var(--Lightred);
+}
+.input3.errr{
+    outline: none;
+    border: 1.5px solid var(--Lightred);
+}
+/* .day input::placeholder{
     color: var(--Off-black);
     font-size: 15px;
 }
-.horizontal_line {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-}
-.horizontal_line .hr_line{
-    margin-left: 1rem;
-    width: 320px;
-    height: 1px;
-    background-color: black;
-}
-.horizontal_line .circle{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: var(--Purple);
-    position: relative;
-    
-}
-.horizontal_line img{
-    width: 20px;
-    height: 60px;
-    position: absolute;
-    margin-left: 344px;
-}
+.day input:focus{
+    outline: none;
+    border: 1.5px solid var(--Purple);
+} */
+
+
 .date_wrapper{
     display: flex;
     flex-direction: column;
@@ -142,6 +150,37 @@ small{
     font-size: 50px;
     color: var(--Purple);
 }
+.button_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -.5rem;
+}
+.hr_line{
+    width: 320px;
+    height: 1px;
+    background-color: black;
+}
+.calc_btn{
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--Purple);
+    color: var(--White);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.calc_btn img{
+    width: 40px;
+    height: 40px;
+}
+.calc_btn:hover{
+    background-color: var(--Off-black);
+}
+
 @media (max-width: 480px) {
     #section{
         padding: 80px;
@@ -153,28 +192,11 @@ small{
         width: 60px;
     }
     .date__wrap{
-        gap: .75rem;
+        gap: .5rem;
+        width: 90%;
 
     }
 
-    .horizontal_line img {
-        margin-left: 252px;
-        position: absolute;
-        top: 200px;
-        margin-left: 0px;
-    }
-    .horizontal_line .circle{
-        position: absolute;
-        margin-bottom: 1rem ;
-
-    }
-    .horizontal_line .hr_line{
-        position: relative;
-        width: 280px;
-        margin-bottom: 2rem;
-        margin-top: 1rem;
-
-    }
     .date_wrapper h1{
         font-size: 30px;
 
@@ -182,9 +204,34 @@ small{
     .first_line{
         font-size: 30px;
     }
+    .button_wrapper{
+        margin-top: 1.3rem;
+    }
+    .hr_line{
+        width: 280px;
+        position: relative;
+        margin-bottom: 20px;
+        
+    }
+    .calc_btn{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        margin-top: -20px ;
+        
+        
+    }
+    .calc_btn img{
+        width: 30px;
+        height: 30px;
+    }
+    small{
+        color: var(--Lightred);
+        font-size: 9px;
+    }
 }
 @media (max-width: 320px) {
-    .horizontal_line .hr_line{
+    .hr_line{
         width: 250px;
     }
 }

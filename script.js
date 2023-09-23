@@ -11,6 +11,16 @@ const errorday = document.getElementById('error_day');
 const errormonth = document.getElementById('error_month');
 const erroryear = document.getElementById('error_year');
 
+const errday = document.querySelector('.label');
+const errmon = document.querySelector('.label2');
+const erryear = document.querySelector('.label3');
+
+
+const errInp = document.querySelector(".input")
+const errInpMon = document.querySelector(".input2")
+const errInpYear = document.querySelector(".input3")
+
+
 
 calculate.addEventListener('click', Calculatedate);
 let isValid = false;
@@ -19,6 +29,9 @@ inputday.addEventListener('input', e =>{
   const day = e.target.value;
   if(day < 1 || day > 31 || day === 0){
     errorday.textContent = 'Invalid day';
+    errday.classList.add("err");
+    errInp.classList.add("errr");
+    // day.classList.add('errr');
     isValid = false;
   }else{
     errorday.textContent = '';
@@ -30,6 +43,8 @@ inputmonth.addEventListener('input', e =>{
   const month = e.target.value;
   if(month < 1 || month > 12 || month === 0){
     errormonth.textContent = 'Invalid month';
+    errmon.classList.add("err");
+    errInpMon.classList.add("errr");
     isValid = false;
   }else{
     errormonth.textContent = '';
@@ -41,6 +56,8 @@ inputyear.addEventListener('input', e =>{
   const year = e.target.value;
   if(year< 1 || year > 2023 || year === 0){
     erroryear.textContent = 'Invalid year';
+    erryear.classList.add("err");
+    errInpYear.classList.add("errr");
     isValid = false;
   }else{
     erroryear.textContent = '';

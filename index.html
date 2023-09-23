@@ -21,26 +21,32 @@
             <div class="sectionwrapper">
                 <div class="date__wrap">
                     <div class="day">
-                        <label>DAY</label>
-                        <input placeholder="DD" required id="day">
+                        <label class="label">DAY</label>
+                        <input placeholder="DD" required id="day" class="input">
                         <small id="error_day"></small>
                     </div>
                     <div class="day">
-                        <label>MONTH</label>
-                        <input placeholder="MM" required id="month">
+                        <label class="label label2">MONTH</label>
+                        <input placeholder="MM" required id="month" class="input input2">
                         <small id="error_month"></small>
                     </div>
                     <div class="day">
-                        <label>YEAR</label>
-                        <input placeholder="YYYY" required id="year">
+                        <label class="label label3">YEAR</label>
+                        <input placeholder="YYYY" required id="year" class="input input3">
                         <small id="error_year"></small>
                     </div>
                 </div>
 
-                <div class="horizontal_line" id="calculate">
+                <!-- <div class="horizontal_line" >
                     <div class="hr_line"></div>
                     <div class="circle" ></div>
                     <img src="./icon-arrow.svg" alt="">
+                </div> -->
+                <div class="button_wrapper" >
+                    <div><hr class="hr_line"></div>
+                <button class="calc_btn" id="calculate">
+                    <img src="./icon-arrow.svg" alt="">
+                </button>
                 </div>
 
                 <div class="date_wrapper">
